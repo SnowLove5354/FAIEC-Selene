@@ -1,31 +1,29 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE html>  <!-- 文档类型声明：HTML5标准 -->
+<html lang="zh-CN">  <!-- HTML根元素，设置语言为简体中文 -->
 <head>
-    <!-- 基础元信息设置 -->
-    <meta charset="UTF-8">  <!-- 字符编码 -->
+	<!-- 基础元信息配置 -->
+    <meta charset="UTF-8">  <!-- 字符编码设置为UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 响应式视口设置 -->
-    <link rel="icon" href="https://youke1.picui.cn/s1/2025/11/24/692405c4b5d27.ico" type="image/x-icon">  <!-- 网页图标设置 -->
-    <link rel="stylesheet" href="css/file.css">  <!-- 引用外部样式表 -->
-    <title>Re0：征兵WIKI</title>
+    <link rel="icon" href="https://youke1.picui.cn/s1/2025/11/24/692405c4b5d27.ico" type="image/x-icon">  <!-- 页面图标链接 -->
+    <title>Re0：征兵WIKI</title>  <!-- 页面标题 -->
+    <link rel="stylesheet" href="css/file.css">  <!-- 引用外部CSS样式表 -->
+    <script defer src="js/file.js"></script>  <!-- 引用外部JavaScript代码 -->
     
-    <style>
-        
-    </style>
 </head>
 <body>
     <!-- 固定顶部容器 -->
     <div class="top-container">
         <!-- 头部区域 -->
         <header>
-            <h1>Re0：征兵WIKI</h1>
-            <p class="subtitle">征兵WIKI，你的征兵答疑小助手</p>
+            <h1>Re0：征兵WIKI</h1>  <!-- 主标题 -->
+            <p class="subtitle">征兵WIKI，你的征兵答疑小助手</p>  <!-- 副标题 -->
         </header>
         
         <!-- 导航栏区域 -->
         <nav>
             <div class="nav-container">
                 <div class="nav-links">
-                	<!-- 导航栏区域  链接外部跳转-->
+                    <!-- 导航栏区域  链接外部跳转-->
                     <a href="https://www.gfbzb.gov.cn/" target="_blank">全国征兵网</a>
                     <a href="exe/大学生参军入伍宣传手册（PDF版）.pdf" target="_blank">宣传手册</a>  <!-- 文件引用  链接外部跳转-->
                     <a href="http://www.mod.gov.cn/" target="_blank">中华人民共和国国防部</a>
@@ -36,8 +34,39 @@
                 
                 <!-- 搜索栏区域 -->
                 <div class="search-box">
-                    <input type="search" placeholder="搜索内容...">  <!-- 搜索栏  内容填写区 -->
-                    <button>🔍</button>  <!-- 搜索栏  “搜索点击”按钮 -->
+                    <!-- 自定义下拉菜单 -->
+                    <div class="custom-select">
+                    	<!-- 默认显示百度搜索引擎 -->
+                        <div class="select-selected" id="select-selected">
+                            <img src="https://youke1.picui.cn/s1/2025/11/29/692b16b42e559.png" width="16" height="16">
+                                百度
+                        </div>
+                        <!-- 下拉选项列表 -->
+                        <div class="select-items">
+                            <div class="select-item" data-value="baidu">
+                                <img src="https://youke1.picui.cn/s1/2025/11/29/692b16b42e559.png" width="16" height="16">
+                                百度
+                            </div>
+                            <div class="select-item" data-value="google">
+                                <img src="https://youke1.picui.cn/s1/2025/11/29/692b16b3f131d.png" width="16" height="16">
+                                谷歌
+                            </div>
+                            <div class="select-item" data-value="bing">
+                                <img src="https://youke1.picui.cn/s1/2025/11/29/692b16b422ac0.png" width="16" height="16">
+                                必应
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 隐藏的select元素用于存储搜索引擎值 -->
+                    <select id="search-engine" class="search-engine-select" style="display: none">
+                        <option value="baidu">百度</option>
+                        <option value="google">谷歌</option>
+                        <option value="bing">必应</option>
+                    </select>
+                    <!-- 搜索输入框 -->
+                    <input type="search" placeholder="搜索内容..." id="search-input">
+                    <!-- 搜索按钮 -->
+                    <button>🔍</button>
                 </div>
             </div>
         </nav>
@@ -49,6 +78,7 @@
         <section class="carousel-dynamic-container">
             <!-- 轮播图容器 -->
             <div class="carousel">
+            	<!-- 幻灯片列表 -->
                 <div class="slides">
                     <!-- 幻灯片1 -->
                     <div class="slide" style="background-image: url(https://youke1.picui.cn/s1/2025/11/24/69240603ac7a1.png)">  <!-- 图片引用 -->
@@ -87,7 +117,7 @@
             
             <!-- 动态文字容器 -->
             <div class="dynamic-text-container">
-                <h2>大国利刃</h2>
+                <h2>大国利刃</h2>  <!-- 动态文字标题 -->
                 <div class="dynamic-text">
                     <!-- 动态内容通过JavaScript插入 -->
                 </div>
@@ -110,7 +140,7 @@
             <div class="content-right">
                 <h2>政策法规</h2>
                 <div class="content">
-                	<!-- 链接内部跳转-->
+                    <!-- 链接内部跳转-->
                     <a href="https://www.gfbzb.gov.cn/ssts/querybyid.action?item=ZCFG_BYFG&artid=2100962138">中华人民共和国兵役法</a>
                     <a href="https://www.gfbzb.gov.cn/ssts/querybyid.action?item=ZCFG_BYFG&artid=2106496023">中华人民共和国国防法</a>
                     <a href="https://www.gfbzb.gov.cn/ssts/querybyid.action?item=ZCFG_BYFG&artid=817828215">征兵工作条例</a>
@@ -125,7 +155,7 @@
         
         <!-- 特色服务七方块容器 -->
         <section class="squares-container">
-            <h2>征兵步骤<男兵版></h2>
+            <h2>征兵步骤<男兵版></h2>  <!-- 方块区域标题 -->
             <div class="squares-row">
                 <!-- 7个特色服务方块 -->
                 <div class="square" data-index="0">
@@ -213,196 +243,5 @@
         </div>
     </footer>
     
-    <script>
-        // 标题池 - 用户切换标签页时显示随机标题
-        const titlePool = [
-            "火力大喵，正义执行！",
-            "枫燃霜碎，万端皆除!",
-            "别走那么快啦，等一等香奈美~",
-            "大获全胜!怎么样?我早就说过，医疗可是战场中必不可少的要素哦。",
-            "学着点，这才叫绘画!",
-            "让我们一起学猫叫，一起喵喵喵喵喵",
-            "鸣~嗯、稍微有点闲。虽然说是好事、但没事干好无聊啊......",
-            "吾辈才不是，才不是很无聊呢！",
-            "这儿环绕着鲜花的芬芳...我们可不可以多歇息一会儿？",
-            "Excalibur！",
-            "以新生的烈阳，撕裂长空！",
-            "人有五名，代驾有4个~"
-        ];
-        
-        // 保存原始标题
-        const originalTitle = document.title;
-        
-        // 页面可见性检测
-        document.addEventListener('visibilitychange', function() {
-            if (document.visibilityState === 'hidden') {
-                // 用户离开页面时随机选择标题
-                const randomIndex = Math.floor(Math.random() * titlePool.length);
-                document.title = titlePool[randomIndex];
-            } else {
-                // 用户返回页面时恢复原始标题
-                document.title = originalTitle;
-            }
-        });
-        
-        // 轮播图功能实现
-        document.addEventListener('DOMContentLoaded', function() {
-            // 获取DOM元素
-            const slides = document.querySelector('.slides');
-            const dots = document.querySelectorAll('.dot');  //导航点
-            const prevBtn = document.querySelector('.carousel-btn.prev');  //左按钮
-            const nextBtn = document.querySelector('.carousel-btn.next');  //右按钮
-            const dynamicText = document.querySelector('.dynamic-text');  //动态文字内容
-            const contentLeft = document.querySelector('.content-left .content');  //轮播文字容器
-            const squares = document.querySelectorAll('.square');
-            let currentIndex = 0;  // 轮播图片下标
-            
-            // 动态文字内容（按幻灯片分组）
-            const slideTexts = [
-                 // 幻灯片1
-                ["中国人民解放军装备的射程最远、威力最大的重型洲际战略核导弹，采用二级液体燃料火箭发动机，具备推力大、比冲力高的特性，射程覆盖全球。",
-                 "采用全新设计的分导式多弹头，可携带10个弹头，可在纵深数百千米区域内选择要打击的独立目标，还可调节打击时序和次序，大幅提高突防能力和打击效果。",
-                 "“东风-5C”液体洲际战略核导弹是我国战略反击体系中的重要组成，打击范围覆盖全球，全时戒备、有效威慑，以武止戈、砥定乾坤。"],
-                 // 幻灯片2
-                ["中国人民解放军海军福建舰（英文：CNS Fujian ，简称：福建舰，舷号：18），是中国自主设计建造的首艘弹射型航空母舰，是中国第一艘电磁弹射型航空母舰，也是中国第三艘航空母舰。",
-                 "福建舰采用常规动力，满载排水量8万余吨，设置平直通长飞行甲板，配备4道阻拦索、3个弹射起飞位格。直接跨跃了传统蒸汽弹射技术，有效利用了常规动力，同时还具备高效储能和系统稳定的特点。电磁弹射起飞的福建舰可以搭载固定翼舰载无人机，重型舰载战斗机以及固定翼舰载预警机等多种新型舰载机，是中国航母舰载机的跨越。",
-                 "福建舰服役后，三航母时代的到来，对于中国维护海洋权益，保障海上通道的安全有着重要意义。"],
-                 // 幻灯片3
-                ["LY-1舰载激光武器（中文名：燎原-1，外文名：LY-1）是中国自主研制的舰载激光反制武器，2025年9月3日在中国人民抗日战争暨世界反法西斯战争胜利80周年阅兵式首次公开亮相。",
-                 "LY-1配备大容量能量单元，可通过舰载火控雷达锁定目标实现“瞄准即锁定，开火即命中”的作战效能，具备单次拦截成本低、拦截精度高等特点。作为定向能武器，其通过加热、破坏目标内部电气系统或致盲光学传感器实施毁伤，主要拦截对象为海上无人装备及反舰导弹。",
-                 "该武器由加长军用车辆搭载展示，外观为大型白色装置配深蓝色屏幕，被称作“光之利刃”，目前至少处于高级测试阶段。"]
-            ];
-            
-            // 特色服务方块内容（按方块分组）
-            const squareContents = [
-                 // 方块1
-                ["每年8月5日前，有应征意向的男性大学生（含在校生、应届毕业生）可登录“全国征兵网”（网址：http://www.gfbzb.gov.cn），填写个人基本信息。",
-                 "报名成功后，自行下载打印《大学生预征对象登记表》。",
-                 "符合国家学费资助条件的，同时还应下载打印《高校学生应征入伍学费补偿国家助学贷款代偿申请表》（以下分别简称《登记表》、《申请表》），分别交所在高校征兵和学生资助管理部门进行审核。"],
-                 // 方块2
-                ["大学生在毕业离校或放假前，根据学校通知，携带本人身份证（户口簿）、毕业证书（高校在校生持学生证）。",
-                 "按规定的时间到指定的地点参加学校所在地县级兵役机关组织的初审初检。",
-                 "被确定为预征对象的学生，领取兵役机关和学校有关部门审核盖章后的《登记表》、《申请表》。"],
-                 // 方块3
-                ["大学生可在学校所在地或者入学前户籍所在地、经常居住地选择一个作为自己参军入伍的应征地。",
-                 "征兵开始后，应征地兵役机关会将具体上站体检时间、地点通知大学生本人。",
-                 "大学生可根据通知要求，携带本人身份证（户口簿）、毕业证书（高校在校生持学生证）以及审核盖章后的《登记表》、《申请表》直接参加应征地县级征兵办公室组织的体格检查，由当地公安、教育等部门同步展开政治联审工作。"],
-                 // 方块4
-                ["政治联审和体检初步合格者，将由县级征兵办公室通知大学生所在乡（镇、街道）基层人武部，安排走访调查。",
-                 "",
-                 ""],
-                 // 方块5
-                ["县级征兵办公室对体检和政审双合格者进行全面衡量，确定预定批准入伍对象。",
-                 "同等条件下，优先确定学历高的应届毕业生为预定新兵。",
-                 ""],
-                 // 方块6
-                ["对预定新兵名单将在县（市、区）、乡（镇、街道）张榜公示，接受群众监督。",
-                 "公示时间不少于5天。",
-                 ""],
-                 // 方块7
-                ["体检、政审合格并经公示的，由县级征兵办公室正式批准入伍，发放《入伍通知书》。",
-                 "学生凭《入伍通知书》办理户口注销、享受义务兵优待，等待交接起运，统一输送至部队服役。",
-                 "申请学费资助的，还要将加盖有县级征兵办公室公章的《申请表》原件和《入伍通知书》复印件，寄送至原就读高校学生资助管理部门。"]
-            ];
-            
-            // 初始化轮播图
-            function initCarousel() {
-                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-                updateDots();
-                updateDynamicText();
-            }
-            
-            // 更新导航点状态
-            function updateDots() {
-                dots.forEach(dot => {
-                    dot.classList.toggle('active', parseInt(dot.dataset.index) === currentIndex);
-                });
-            }
-            
-            // 更新动态文字内容
-            function updateDynamicText() {
-                dynamicText.innerHTML = '';
-                const paragraphs = slideTexts[currentIndex];
-                paragraphs.forEach(paragraph => {
-                    const p = document.createElement('p');
-                    p.textContent = paragraph;
-                    dynamicText.appendChild(p);
-                });
-            }
-            
-            // 更新左侧内容区域
-            function updateContentLeft(index) {
-                contentLeft.innerHTML = '';
-                const paragraphs = squareContents[index];
-                paragraphs.forEach(paragraph => {
-                    const p = document.createElement('p');
-                    p.textContent = paragraph;
-                    contentLeft.appendChild(p);
-                });
-            }
-            
-            // 切换到指定幻灯片
-            function goToSlide(index) {
-                currentIndex = (index + dots.length) % dots.length;
-                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-                updateDots();
-                updateDynamicText();
-            }
-            
-            // 下一张幻灯片
-            function nextSlide() {
-                goToSlide(currentIndex + 1);
-            }
-            
-            // 上一张幻灯片
-            function prevSlide() {
-                goToSlide(currentIndex - 1);
-            }
-            
-            // 自动播放设置
-            let autoPlay = setInterval(nextSlide, 5000);  //每5秒执行一次
-            
-            // 导航点点击事件
-            dots.forEach(dot => {
-                dot.addEventListener('click', function() {
-                    goToSlide(parseInt(this.dataset.index));
-                    resetAutoPlay();
-                });
-            });
-            
-            // 按钮点击事件
-            prevBtn.addEventListener('click', function() {
-                prevSlide();
-                resetAutoPlay();
-            });  //手动切换到上一张幻灯片
-            
-            nextBtn.addEventListener('click', function() {
-                nextSlide();
-                resetAutoPlay();
-            });  //手动切换到下一张幻灯片
-            
-            // 重置自动播放计时器
-            function resetAutoPlay() {
-                clearInterval(autoPlay);
-                autoPlay = setInterval(nextSlide, 5000);
-            }
-            
-            // 特色服务方块点击事件
-            squares.forEach(square => {
-                square.addEventListener('click', function() {
-                    const index = parseInt(this.dataset.index);
-                    updateContentLeft(index);  //点击方块时更新左侧内容区域文字
-                    
-                    // 更新方块状态
-                    squares.forEach(s => s.style.opacity = '0.7');
-                    this.style.opacity = '1';
-                });
-            });
-            
-            // 初始化
-            initCarousel();
-        });
-    </script>
 </body>
-
 </html>
